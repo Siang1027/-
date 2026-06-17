@@ -1,0 +1,3 @@
+analysis_run_date: 2026-05-24
+clean_data_source: Data/clean_data_2026-05-24.csv
+output_policy: Results/YYYY-MM-DD is created from the execution date.

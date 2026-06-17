@@ -1,0 +1,8 @@
+Reports/
+*.pptx
+shiny.out.log
+shiny.err.log
+.Rhistory
+.RData
+.Rproj.user/
+__pycache__/

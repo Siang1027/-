@@ -1,0 +1,111 @@
+Raw Data Inspection Report
+Run date: 2026-05-24 
+
+A. Wage CSV sample before cleaning: raw_wages_2015.csv 
+colnames():
+[1] "項目別_金額_新臺幣元"                        
+[2] "按月計薪者每人每月平均最低薪資_金額_新臺幣元"
+[3] "按日計薪者每人每日平均最低薪資_金額_新臺幣元"
+[4] "按時計薪者每人每時平均最低薪資_金額_新臺幣元"
+
+nrow() / ncol():
+nrow ncol 
+ 138    4 
+
+str():
+spc_tbl_ [138 × 4] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ 項目別_金額_新臺幣元                        : chr [1:138] "總計" "主管及監督人員" "高階主管及總執行長" "行政及商業經理人員" ...
+ $ 按月計薪者每人每月平均最低薪資_金額_新臺幣元: num [1:138] 27947 43147 141942 57006 58988 ...
+ $ 按日計薪者每人每日平均最低薪資_金額_新臺幣元: num [1:138] 1410 2000 NA NA NA ...
+ $ 按時計薪者每人每時平均最低薪資_金額_新臺幣元: num [1:138] 128 NA NA NA NA NA NA NA 199 NA ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   項目別_金額_新臺幣元 = col_character(),
+  ..   按月計薪者每人每月平均最低薪資_金額_新臺幣元 = col_double(),
+  ..   按日計薪者每人每日平均最低薪資_金額_新臺幣元 = col_double(),
+  ..   按時計薪者每人每時平均最低薪資_金額_新臺幣元 = col_double()
+  .. )
+ - attr(*, "problems")=<pointer: 0x000001e68fafe810> 
+
+head():
+# A tibble: 6 × 4
+  項目別_金額_新臺幣元             按月計薪者每人每月平均最低薪資_金額_新…… 按日計薪者每人每日平均最低薪資_金額_新……
+  <chr>                                             <dbl>                  <dbl>
+1 總計                                              27947                   1410
+2 主管及監督人員                                    43147                   2000
+3 高階主管及總執行長                               141942                     NA
+4 行政及商業經理人員                                57006                     NA
+5 生產及專業服務經理人員                            58988                     NA
+6 餐旅、零售及其他場所服務經理人員                  37600                     NA
+# ℹ abbreviated names: ¹​按月計薪者每人每月平均最低薪資_金額_新臺幣元,
+#   ²​按日計薪者每人每日平均最低薪資_金額_新臺幣元
+# ℹ 1 more variable: 按時計薪者每人每時平均最低薪資_金額_新臺幣元 <dbl>
+
+tail():
+# A tibble: 6 × 4
+  項目別_金額_新臺幣元       按月計薪者每人每月平均最低薪資_金額_新臺幣元…¹… 按日計薪者每人每日平均最低薪資_金額_新……
+  <chr>                                             <dbl>                  <dbl>
+1 <NA>                                                 NA                     NA
+2 按員工規模分                                         NA                     NA
+3 ３ ０ ０ 人 　 　 以 　 上                        31394                    975
+4 １ ０ ０ 人 至 ２ ９ ９ 人                        27887                   1060
+5 　 ３ ０ 人 至 　 ９ ９ 人                        27994                   1430
+6 　 ２ ９ 人 及 　 以 　 下                        25839                   1438
+# ℹ abbreviated names: ¹​按月計薪者每人每月平均最低薪資_金額_新臺幣元,
+#   ²​按日計薪者每人每日平均最低薪資_金額_新臺幣元
+# ℹ 1 more variable: 按時計薪者每人每時平均最低薪資_金額_新臺幣元 <dbl>
+
+summary():
+ 項目別_金額_新臺幣元 按月計薪者每人每月平均最低薪資_金額_新臺幣元
+ Length   :138        Min.   : 20781                              
+ N.unique :137        1st Qu.: 24812                              
+ N.blank  :  0        Median : 27796                              
+ Min.nchar:  2        Mean   : 31318                              
+ Max.nchar: 21        3rd Qu.: 34193                              
+ NAs      :  1        Max.   :141942                              
+                      NAs    :2                                   
+ 按日計薪者每人每日平均最低薪資_金額_新臺幣元
+ Min.   : 710.0                              
+ 1st Qu.: 993.8                              
+ Median :1203.0                              
+ Mean   :1405.0                              
+ 3rd Qu.:1526.8                              
+ Max.   :5000.0                              
+ NAs    :90                                  
+ 按時計薪者每人每時平均最低薪資_金額_新臺幣元
+ Min.   :120.0                               
+ 1st Qu.:122.0                               
+ Median :126.0                               
+ Mean   :133.7                               
+ 3rd Qu.:131.0                               
+ Max.   :240.0                               
+ NAs    :93                                  
+
+B. Imported wages after standardizing names/types and before filtering:
+nrow ncol 
+1358    9 
+  nominal_wage      daily_wage     hourly_wage    
+ Min.   : 20732   Min.   :  283   Min.   : 120.0  
+ 1st Qu.: 27988   1st Qu.: 1062   1st Qu.: 140.8  
+ Median : 31834   Median : 1363   Median : 165.5  
+ Mean   : 35125   Mean   : 1741   Mean   : 184.9  
+ 3rd Qu.: 38225   3rd Qu.: 1688   3rd Qu.: 183.0  
+ Max.   :141942   Max.   :40000   Max.   :2500.0  
+ NAs    :2        NAs    :927     NAs    :858     
+
+C. CPI annual aggregation before joining:
+# A tibble: 10 × 3
+    year   cpi cpi_months
+   <int> <dbl>      <int>
+ 1  2015  94.5         12
+ 2  2016  95.9         12
+ 3  2017  96.5         12
+ 4  2018  97.8         12
+ 5  2019  98.3         12
+ 6  2020  98.1         12
+ 7  2021 100           12
+ 8  2022 103.          12
+ 9  2023 106.          12
+10  2024 108.          12
+
+Each CPI year must contain 12 monthly original-value observations.

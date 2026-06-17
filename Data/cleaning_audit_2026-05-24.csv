@@ -1,0 +1,8 @@
+audit_item,value,validation
+raw_wage_rows_loaded,1358,informational
+rows_excluded_missing_or_nonpositive_nominal_wage,2,review exclusion file
+wage_rows_before_cpi_join,1356,must equal wage_rows_after_cpi_join
+wage_rows_after_cpi_join,1356,must equal wage_rows_before_cpi_join
+cpi_year_keys,10,must equal 10
+cpi_years_with_12_months,10,must equal 10
+missing_cpi_after_join,0,must equal 0

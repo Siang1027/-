@@ -1,0 +1,3 @@
+year,record_type,job_category,company_size,source_item,nominal_wage,daily_wage,hourly_wage,source_file,exclusion_reason
+2015,blank_row,,,,,,,raw_wages_2015.csv,monthly nominal wage is missing in raw data
+2024,job_category,街頭服務工,,街頭服務工,,,183,raw_wages_2024.csv,monthly nominal wage is missing in raw data
