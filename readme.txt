@@ -62,11 +62,7 @@ Results/YYYY-MM-DD/02_supervisor_grassroots_wage_ratio.png
 Results/YYYY-MM-DD/03_policy_wage_gap_descriptive_stats.png
 Reports/policy_wage_gap_report_YYYY-MM-DD.pptx
 
-報告簡報
---------
-1. 執行 Scripts/create_report_ppt.py 可依最新 Results/YYYY-MM-DD/ 產生報告 PPT。
-2. Windows 可直接雙擊 生成報告PPT.bat。
-3. PPT 會輸出至 Reports/policy_wage_gap_report_YYYY-MM-DD.pptx。
+
 
 結果版本管理
 ------------
